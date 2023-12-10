@@ -435,7 +435,8 @@ const halfTree = function (num) {
 const tree = function (num) {
   let albero = " \n";
   for (let i = 1; i <= num; i++) {
-    let riga = "";
+    let spazi = " ".repeat(num - i); //Rispetto al precedente esercizio, qui dobbiamo dare margine dal bordo destro, quindi aggiungere gli spazio all'inizio di ogni riga. Facendo una ricerca online, ho trovato il metodo repeat(). Come parametro del metodo gli diciamo che deve ripetere gli spazi "num - i" --> La prima riga avrà più spazio (Es. num=5, la prima riga avrà spazio 5-1 = 4), mentre l'ultima no avrà spazio.
+    let riga = spazi;
     for (let j = 1; j <= i * 2 - 1; j++) {
       riga += "*";
     }
